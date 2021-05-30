@@ -1,0 +1,85 @@
+.director {
+  padding: 65px 140px 130px 140px;
+
+  @include xl {
+    padding: 35px 100px 90px 100px;
+  }
+  @include tab {
+    padding: 65px 20px 100px 20px;
+  }
+  &__info {
+    margin-bottom: 60px;
+
+    @include xl {
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 40px;
+      text-align: left;
+      color: #1c5392;
+
+      @include xl {
+        font-size: 30px;
+      }
+    }
+
+    p {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 24px;
+      text-align: left;
+      color: $black;
+
+      @include xl {
+        font-size: 18px;
+      }
+      @include sm {
+        font-style: 14px;
+      }
+    }
+  }
+  &__bottom {
+    padding: 0 140px;
+    display: flex;
+    justify-content: space-between;
+
+    @include xl {
+      padding: 0;
+    }
+    @include tab {
+      padding: 0 95px;
+      flex-direction: column;
+    }
+    @include sm {
+      padding: 0;
+    }
+
+    img {
+      width: 40%;
+        height: fit-content;
+
+        @include tab {
+          width: 100%;
+          margin-bottom: 50px;
+        }
+    }
+  }
+  &__text {
+    width: 50%;
+
+    @include tab {
+      width: 100%;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+      color: $dark;
+
+      @include xl {
+        font-size: 16px;
+      }
+    }
+  }
+}

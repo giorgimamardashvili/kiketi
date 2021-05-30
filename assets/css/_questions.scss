@@ -1,0 +1,43 @@
+.questions {
+  padding: 70px 140px;
+
+  @include xl {
+      padding: 70px 100px;
+  }
+  @include tab {
+    padding: 50px 20px 90px 20px;
+  }
+  &__name {
+    font-family: "MarkCAPS-bold", sans-serif;
+    font-size: 40px;
+    text-align: left;
+    color: $blue;
+    margin-bottom: 50px;
+
+    @include tab {
+      font-size: 30px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+  }
+  &__item {
+      margin-bottom: 30px;
+    span {
+      display: block;
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 20px;
+      text-align: left;
+      color: $blue;
+      margin-bottom: 10px;
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+    p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__nav header__nav-radius">
+            <a href="index.html" class="logo">
+                <img src="assets/imgs/icons/main-logo.svg" alt="">
+                <span>იაკობ გოგებაშვილის <br>
+                    სახელობის აკადემია</span>
+            </a>
+            <ul class="nav">
+                <li class="nav__item">
+                    <a class="nav__name">მთავარი</a>
+                    <div class="dropdown-content">
+                        <a href="aboutCollege-page.html">სასწავლებლის შესახებ</a>
+                        <a href="enterCollege-page.html">სკოლაში მიღება</a>
+                        <a href="doc-page.html">დოკუმენტაცია</a>
+                        <a href="collegeRules-page.html">შინაგანაწესი</a>
+                        <a href="director.html">დირექტორი</a>
+                        <a href="Colleagues-page.html">თანამშრომლები</a>
+                        <a href="Graduate-page.html">კურსდამთავრებულები</a>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__name">სასწავლო პროგრამები</a>
+                    <div class="dropdown-content">
+                        <a href="academic-ed.html">აკადემიური განათლება</a>
+                        <a href="Spiritual-upbringing.html">სულიერი აღზრდა</a>
+                        <a href="sports.html">სპორტი</a>
+                        <a href="Vital-skills.html">სასიცოცხლო უნარჩვევები</a>
+                        <a href="Preparatory-group.html">მოსამზადებელი ჯგუფი</a>
+                        <a href="online-training.html">ონლაინ სწავლება</a>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__name">მომსახურება</a>
+                    <div class="dropdown-content">
+                        <a href="infrastructure.html">სკოლის ინფრასტრუქტურა</a>
+                        <a href="bus.html">ავტობუსი</a>
+                        <a href="cafeteria.html">სასადილო</a>
+                        <a href="doctor-cabinet.html">ექიმის კაბინეტი</a>
+                        <a href="psychologist.html">ფსიქოლოგი</a>
+                        <a href="security.html">უსაფრთხოება</a>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__name">პროექტები</a>
+                    <div class="dropdown-content">
+                        <a href="trainings.html">ტრენინგები</a>
+                        <a href="sunday-school.html">საკვირაო სკოლა</a>
+                        <a href="summer-camp.html">საზაფხულო ბანაკი</a>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a href="gallery.html" class="nav__name" id="gallery">გალერეა</a>
+                    <div class="dropdown-content">
+                        <a href="photo-gallery.html">ფოტო გალერეა</a>
+                        <a href="video-gallery.html">ვიდეო გალერეა</a>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__name">საინფორმაციო გვერდი</a>
+                    <div class="dropdown-content">
+                        <a href="news-page.html">ახალი ამბები</a>
+                        <a href="questions.html">ხშირად დასმული კითხვები</a>
+                        <a href="contact.html">კონტაქტი</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="header__lang header__lang_blue">
+                <a class="lang1">ENG</a>
+                <a class="lang2">GEO</a>
+            </div>
+
+        </div>
+        <div class="header__right">
+            <div class="header__lang">
+                <a class="lang1">ENG</a>
+                <a class="lang2">GEO</a>
+                
+            </div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+    </header>
+    <section class="navigation">
+        <ul class="navigation__list">
+            <li class="navigation__item active">
+                <a class="navigation__name">
+                     <span>მთავარი</span> 
+                     <div class="plus-minus">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <div class="navigation__dropdown">
+                    <a href="aboutCollege-page.html">სასწავლებლის შესახებ</a>
+                    <a href="enterCollege-page.html">სკოლაში მიღება</a>
+                    <a href="doc-page.html">დოკუმენტაცია</a>
+                    <a href="collegeRules-page.html">შინაგანაწესი</a>
+                    <a href="director.html">დირექტორი</a>
+                    <a href="Colleagues-page.html">თანამშრომლები</a>
+                    <a href="Graduate-page.html">კურსდამთავრებულები</a>
+                </div>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__name"><span>სასწავლო პროგრამები</span> <div class="plus-minus">
+                    <span></span>
+                    <span></span>
+                </div></a>
+                <div class="navigation__dropdown">
+                    <a href="academic-ed.html">აკადემიური განათლება</a>
+                    <a href="Spiritual-upbringing.html">სულიერი აღზრდა</a>
+                    <a href="sports.html">სპორტი</a>
+                    <a href="Vital-skills.html">სასიცოცხლო უნარჩვევები</a>
+                    <a href="Preparatory-group.html">მოსამზადებელი ჯგუფი</a>
+                    <a href="online-training.html">ონლაინ სწავლება</a>
+                </div>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__name"><span>მომსახურება</span> <div class="plus-minus">
+                    <span></span>
+                    <span></span>
+                </div></a>
+                <div class="navigation__dropdown">
+                    <a href="infrastructure.html">სკოლის ინფრასტრუქტურა</a>
+                    <a href="bus.html">ავტობუსი</a>
+                    <a href="cafeteria.html">სასადილო</a>
+                    <a href="doctor-cabinet.html">ექიმის კაბინეტი</a>
+                    <a href="psychologist.html">ფსიქოლოგი</a>
+                    <a href="security.html">უსაფრთხოება</a>
+                </div>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__name"><span>პროექტები</span> <div class="plus-minus">
+                    <span></span>
+                    <span></span>
+                </div></a>
+                <div class="navigation__dropdown">
+                    <a href="trainings.html">ტრენინგები</a>
+                    <a href="sunday-school.html">საკვირაო სკოლა</a>
+                    <a href="summer-camp.html">საზაფხულო ბანაკი</a>
+                </div>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__name"><span>გალერეა</span> <div class="plus-minus">
+                    <span></span>
+                    <span></span>
+                </div></a>
+                <div class="navigation__dropdown">
+                    <a href="photo-gallery.html">ფოტო გალერეა</a>
+                    <a href="video-gallery.html">ვიდეო გალერეა</a>
+                </div>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__name"><span>საინფორმაციო გვერდი</span> <div class="plus-minus">
+                    <span></span>
+                    <span></span>
+                </div></a>
+                <div class="navigation__dropdown">
+                    <a href="news-page.html">ახალი ამბები</a>
+                    <a href="questions.html">ხშირად დასმული კითხვები</a>
+                    <a href="contact.html">კონტაქტი</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="main-slider">
+        <div class="swiper-container main-slider__container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper main-slider__wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide main-slider__slide">
+                  <img src="assets/imgs/vadim-sherbakov-d6ebY-faOO0-unsplash.jpg" alt="">
+                  <div>
+                      ლორემ იპსუმ ლორემ იპსუმ ლორემ იპსუმ
+                    </div>
+                </div>
+              <div class="swiper-slide main-slider__slide">
+                  <img src="assets/imgs/vadim-sherbakov-d6ebY-faOO0-unsplash.jpg" alt="">
+                  <div>
+                      ლორემ იპსუმ ლორემ იპსუმ ლორემ იპსუმ
+                    </div>
+                </div>
+              <div class="swiper-slide main-slider__slide">
+                  <img src="assets/imgs/vadim-sherbakov-d6ebY-faOO0-unsplash.jpg" alt="">
+                  <div>
+                      ლორემ იპსუმ ლორემ იპსუმ ლორემ იპსუმ
+                    </div>
+                </div>
+            </div>
+          
+            <!-- If we need navigation buttons -->
+            <!-- <div class="main-slider__buttons">
+                <div class="swiper-button-prev main-slider__prev"></div>
+                <div class="swiper-button-next main-slider__next"></div>
+            </div> -->
+            
+          </div>
+          <div class="main-slider__buttons main-slider__buttons_out">
+            <div class="swiper-button-prev main-slider__prev"></div>
+            <div class="swiper-button-next main-slider__next"></div>
+        </div>
+          <div class="main-slider__socials">
+              <a href="">
+                  <img src="assets/imgs/icons/facebook.svg" alt="">
+                </a>
+              <a href="">
+                  <img src="assets/imgs/icons/twitter.svg" alt="">
+                </a>
+          </div>
+    </section>
+    <section class="about-college">
+        <img src="assets/imgs/photo-1571260899304-425eee4c7efc.jpg" alt="">
+        <div class="about-college__text">
+            <h2>სასწავლებლის შესახებ</h2>
+            <p>ლორემ იპსუმ  არის ბეჭდვისა და ტიპაჟირების ინდუსტრიის ნატყუარი ტექსტი. Lorem Ipsum იყო ინდუსტრიის სტანდარტული ცუდი ტექსტი 1500-იანი წლებიდან, როდესაც უცნობმა პრინტერმა აიღო გალერეა და შეაზავა მას, რომ შეესრულებინა ტიპის ნიმუშების წიგნი.</p>
+            <a href="">ვრცლად</a>
+        </div>
+    </section>
+    <section class="news">
+        <h3>სიახლეები</h3>
+        <div class="swiper-container news__container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper news__wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide news__slide">
+                  <img src="assets/imgs/photo-1523050854058-8df90110c9f1.jpg" alt="">
+                  <div class="news__info">
+                      <h4>სათაური</h4>
+                      <p>ლორემ იპსუმ  არის ბეჭდვისა და ტიპაჟირების ინდუსტრიის ნატყუარი ტექსტი. Lorem Ipsum იყო</p>
+                      <div>
+                          <p>27.03.2021</p>
+                          <a href="">ვრცლად</a>
+                      </div>
+                  </div>
+                </div>
+              <div class="swiper-slide news__slide">
+                  <img src="assets/imgs/photo-1523050854058-8df90110c9f1.jpg" alt="">
+                  <div class="news__info">
+                      <h4>სათაური</h4>
+                      <p>ლორემ იპსუმ  არის ბეჭდვისა და ტიპაჟირების ინდუსტრიის ნატყუარი ტექსტი. Lorem Ipsum იყო</p>
+                      <div>
+                          <p>27.03.2021</p>
+                          <a href="">ვრცლად</a>
+                      </div>
+                  </div>
+                </div>
+              <div class="swiper-slide news__slide">
+                  <img src="assets/imgs/photo-1523050854058-8df90110c9f1.jpg" alt="">
+                  <div class="news__info">
+                      <h4>სათაური</h4>
+                      <p>ლორემ იპსუმ  არის ბეჭდვისა და ტიპაჟირების ინდუსტრიის ნატყუარი ტექსტი. Lorem Ipsum იყო</p>
+                      <div>
+                          <p>27.03.2021</p>
+                          <a href="">ვრცლად</a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev news__prev news__button"></div>
+            <div class="swiper-button-next news__next news__button"></div>
+    </section>
+    <section class="college-options">
+        <div class="college-options__item">
+            <h4>ტაძარი</h4>
+            <div class="college-options__wrapper">
+                <img src="assets/imgs/rafik-wahba-rds_B7-6Oos-unsplash.jpg" alt="">
+                <div class="college-options__info">
+                    <p>
+                        ლორემ იპსუმ  არის ბეჭდვისა და ტიპაჟირების ინდუსტრიის ნატყუარი ტექსტი. Lorem Ipsum იყო ინდუსტრიის 
+                    </p>
+                    <a href="">
+                        <img src="assets/imgs/icons/Group 239.svg" alt="">
+                        <span>ვრცლად</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="college-options__item">
+            <h4>სკოლის სამოსი</h4>
+            <div class="college-options__wrapper">
+                <img src="assets/imgs/qiufmh1ixu8yl6k.jpg" alt="">
+                <div class="college-options__info">
+                    <p>
+                        ლორემ იპსუმ  არის ბეჭდვისა და ტიპაჟირების ინდუსტრიის ნატყუარი ტექსტი. Lorem Ipsum იყო ინდუსტრიის 
+                    </p>
+                    <a href="">
+                        <img src="assets/imgs/icons/Group 239.svg" alt="">
+                        <span>ვრცლად</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="college-options__item">
+            <h4>სარაგბო კლუბი 
+                "იუნკერები"</h4>
+                <div class="college-options__wrapper">
+                    <img src="assets/imgs/edgar-pimenta-QCjG5hGpdA0-unsplash.jpg" alt="">
+                    <div class="college-options__info">
+                        <p>
+                            ლორემ იპსუმ  არის ბეჭდვისა და ტიპაჟირების ინდუსტრიის ნატყუარი ტექსტი. Lorem Ipsum იყო ინდუსტრიის 
+                        </p>
+                        <a href="">
+                            <img src="assets/imgs/icons/Group 239.svg" alt="">
+                            <span>ვრცლად</span>
+                        </a>
+                    </div>
+                </div>
+            
+        </div>
+        <div class="college-options__item">
+            <h4>ელექტრონული ჟურნალი</h4>
+            <div class="college-options__wrapper">
+                <img src="assets/imgs/photo-1486312338219-ce68d2c6f44d.jpg" alt="">
+                <div class="college-options__info">
+                    <p>
+                        ლორემ იპსუმ  არის ბეჭდვისა და ტიპაჟირების ინდუსტრიის ნატყუარი ტექსტი. Lorem Ipsum იყო ინდუსტრიის 
+                    </p>
+                    <a href="">
+                        <img src="assets/imgs/icons/Group 239.svg" alt="">
+                        <span>ვრცლად</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__socials">
+            <div>
+                <a href=""><img src="assets/imgs/icons/facebook.svg" alt=""></a>
+                <a href=""><img src="assets/imgs/icons/twitter.svg" alt=""></a>
+            </div>
+            <span>Created by Smartweb</span>
+        </div>
+        <div class="footer__info">
+            <div class="footer__mail">
+                <p>ელ. ფოსტა</p>
+                <span>gogebashvili@gmail.com</span>
+            </div>
+            <div class="footer__address">
+                <p>მისამართი</p>
+                <span>გოგებაშვილის 125</span>
+            </div>
+            <div class="footer__tel">
+                <p>ტელეფონი</p>
+                <span>032 23 23 23</span>
+                <span>593 23 23 23</span>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script>
+        const swiperMain = new Swiper('.main-slider__container', {
+
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.main-slider__next',
+                prevEl: '.main-slider__prev',
+            },
+        });
+        const swiperNews = new Swiper('.news__container', {
+
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: "auto",
+            spaceBetween: 15,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.news__next',
+                prevEl: '.news__prev',
+            },
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                slidesPerView: 1,
+                },
+
+                701: {
+                slidesPerView: 'auto',
+                },
+            }
+        });
+
+        function langChange() {
+            const langs = document.querySelectorAll(".header__lang");
+            
+            langs.forEach(item => {
+                let children = item.children
+
+                children[0].addEventListener("click", () => {
+                    children[1].classList.toggle("active")
+                })
+            })
+
+            
+        }
+        langChange()
+    </script>
+</body>
+</html>

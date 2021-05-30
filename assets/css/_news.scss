@@ -1,0 +1,203 @@
+.news {
+  padding: 290px 140px 90px 140px;
+  margin-left: 140px;
+  background-color: $blue;
+  width: calc(100% - 140px);
+  position: relative;
+  border-radius: 10px 0px 0px 10px;
+
+  @include xl {
+    padding: 135px 0 115px 90px;
+    width: calc(100% - 100px);
+    margin-left: 100px;
+  }
+
+  @include tab {
+    padding: 80px 0 100px 90px;
+    width: calc(100% - 20px);
+    margin-left: 20px;
+  }
+
+  @include m2 {
+    padding: 30px 15px 95px 15px;
+
+  }
+
+  h3 {
+    font-family: "DejaVu-LightCaps", sans-serif;
+    font-size: 28px;
+    text-align: left;
+    color: $white;
+    margin-bottom: 35px;
+
+    @include xl {
+      font-size: 25px;
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+
+    @include tab {
+      font-size: 20px;
+    }
+  }
+  &__container {
+    width: 100%;
+  }
+  &__wrapper {
+  }
+  &__slide {
+    display: flex;
+    width: 491px !important;
+    height: 221px;
+    border-radius: 10px;
+    background: $white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    @include tab {
+      width: 417px !important;
+    }
+
+    @include m2 {
+      width: 100% !important;
+      height: 185px !important;
+    }
+
+    img {
+      padding: 55px 35px 55px 50px;
+      border-radius: 10px;
+
+      @include tab {
+        padding: 55px 15px;
+      }
+
+      @include m2 {
+        width: 110px;
+        height: 110px;
+        padding: 20px 10px 0 10px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 35px 40px 0;
+
+    @include m2 {
+      padding: 20px 10px;
+    }
+
+    h4 {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 18px;
+      text-align: left;
+      color: $dark;
+    }
+    p {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: left;
+      color: $black;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include sm {
+        justify-content: flex-end;
+      }
+      
+
+      p {
+        font-family: "MarkCAPS-bold", sans-serif;
+        font-size: 16px;
+        text-align: left;
+        color: #363636;
+
+        @include sm {
+          position: absolute;
+          left: 12px;
+          bottom: 20px;
+        }
+      }
+
+      a {
+        font-family: "MarkCAPS-bold", sans-serif;
+        font-size: 16px;
+        text-align: left;
+        color: #363636;
+      }
+    }
+  }
+
+  &__button {
+    width: 64px !important;
+    height: 64px !important;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    --webkit-backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: 450px !important;
+
+    @include xl {
+      width: 40px !important;
+      height: 40px !important;
+      top: 470px !important;
+    }
+
+    @include tab {
+      top: 400px !important;
+    }
+
+    @include m2 {
+      top: unset !important;
+      bottom: 20px !important;
+    }
+    &::after {
+      font-size: 25px !important;
+      color: $white;
+
+      @include xl {
+        font-size: 18px !important;
+      }
+    }
+  }
+  &__prev {
+    left: 35px !important;
+
+    @include xl {
+      right: 135px !important;
+      left: unset !important;
+    }
+
+    @include m2 {
+      left: 42% !important;
+      transform: translateX(-42%);
+    }
+    @include rwd(560) {
+      left: 35% !important;
+      transform: translateX(-35%);
+    }
+  }
+  &__next {
+    right: 35px !important;
+
+    @include xl {
+      right: 70px !important;
+    }
+
+    @include m2 {
+      right: 42% !important;
+      transform: translateX(-42%);
+    }
+    @include rwd(560) {
+      right: 35% !important;
+      transform: translateX(-35%);
+    }
+  }
+}

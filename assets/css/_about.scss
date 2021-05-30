@@ -1,0 +1,238 @@
+.about {
+  padding: 50px 140px 100px 140px;
+
+  @include xl {
+    padding: 30px 100px 90px 100px;
+  }
+  @include tab {
+    padding: 20px 20px 90px 20px;
+  }
+  @include sm {
+    padding-top: 0;
+  }
+  &__head {
+    width: 100%;
+    height: 410px;
+    margin-bottom: 40px;
+    position: relative;
+
+    @include xl {
+      height: 310px;
+    }
+    @include sm {
+      width: 100vw;
+      height: 130px;
+      margin-left: -20px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(0px) brightness(0.8);
+      -webkit-filter: blur(0px) brightness(0.8);
+    }
+
+    h1 {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 40px;
+      color: $white;
+      padding: 25px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      @include xl {
+        font-size: 30px;
+      }
+      @include tab {
+        font-size: 20px;
+      }
+      @include sm {
+        font-size: 18px;
+        padding: 0;
+        left: 15px;
+        bottom: 15px;
+      }
+    }
+  }
+  &__swiper {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__text {
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+      color: $dark;
+    }
+  }
+}
+
+.first-swiper {
+  &__container {
+    width: 100%;
+    height: 236px;
+  }
+  &__wrapper {
+      height: 100%;
+  }
+  &__slide {
+
+
+    &:hover {
+      .on-hover {
+        opacity: 1;
+        img {
+          width: 48px;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .on-hover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba($blue, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+
+      img {
+        width: 1px;
+        height: auto;
+        transition: width 0.3s;
+      }
+    }
+  }
+}
+
+.second-swiper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba($black, 0.7);
+  z-index: 100;
+  flex-direction: column;
+
+  &.active {
+    display: flex;
+  }
+
+  &__container {
+    width: 100%;
+    height: auto;
+
+    &_video {
+      height: 70%;
+
+      @include tab {
+        height: 50%;
+      }
+      @include m2 {
+        height: 35%;
+      }
+      @include sm {
+        height: 25%;
+      }
+    }
+
+  }
+  &__wrapper {
+    height: 100%;
+  }
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+
+      @include tab {
+        width: 75%;
+      }
+      @include sm {
+        width: 95%;
+      }
+    }
+    iframe {
+      width: 80%;
+      height: 100%;
+
+      @include tab {
+        width: 75%;
+      }
+    }
+  }
+
+  &__buttons {
+    width: 64px !important;
+    height: 64px !important;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+
+    @include xl {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include sm {
+      top: unset !important;
+      bottom: 20% !important;
+
+    }
+
+    &::after {
+      font-size: 25px !important;
+      color: $white;
+    }
+  }
+  &__prev {
+    left: 5% !important;
+
+    @include tab {
+      left: 0 !important;
+    }
+    @include sm {
+      left: 30% !important;
+    }
+  }
+  &__next {
+    right: 5% !important;
+
+    @include tab {
+      right: 0 !important;
+    }
+    @include sm {
+      right: 30% !important;
+    }
+  }
+
+  &__close {
+    margin-right: 11%;
+    margin-bottom: 30px;
+    order: -1;
+    cursor: pointer;
+  }
+}

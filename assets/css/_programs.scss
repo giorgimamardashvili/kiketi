@@ -1,0 +1,326 @@
+.programs {
+  padding: 60px 140px 150px 140px;
+  overflow: hidden;
+
+  @include xl {
+    padding: 30px 100px 90px 100px;
+  }
+
+  @include tab {
+    padding: 45px 20px 90px 20px;
+  }
+  @include rwd(760) {
+    padding-bottom: 135px;
+  }
+  &__links {
+    margin-bottom: 30px;
+
+    @include xl {
+      margin-bottom: 10px;
+    }
+    a {
+      font-size: 18px;
+      text-align: left;
+      color: $black;
+      margin-right: 25px;
+      position: relative;
+
+      &::after {
+        content: url(../imgs/icons/arrow-right.svg);
+        position: absolute;
+        right: -20px;
+      }
+    }
+    span {
+      font-size: 18px;
+      text-align: left;
+      color: $black;
+    }
+  }
+  &__name {
+    font-family: "MarkCAPS-bold", sans-serif;
+    font-size: 40px;
+    text-align: left;
+    color: $blue;
+    margin-bottom: 60px;
+
+    @include xl {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+
+    @include tab {
+      margin-bottom: 30px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+  }
+  &__subname {
+    width: calc(100vw - 140px);
+    position: relative;
+    left: -140px;
+    padding: 56px 140px;
+    height: 137px;
+    border-radius: 0px 0px 10px 0px;
+    background: $blue;
+    margin-top: 40px;
+    margin-bottom: 120px;
+
+    @include xl {
+      width: calc(100vw - 100px);
+      height: 83px;
+      padding: 30px 100px;
+      margin-bottom: 90px;
+      left: -100px;
+    }
+
+    @include tab {
+      width: calc(100vw - 95px);
+      padding: 30px 20px;
+      left: -20px;
+    }
+
+    h2 {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 20px;
+      text-align: left;
+      color: $white;
+
+      @include xl {
+        font-size: 18px;
+      }
+    }
+  }
+  &__info {
+    position: relative;
+    margin: 0 -140px;
+
+    @include xl {
+      margin: 0 -100px;
+    }
+
+    @include tab {
+      margin: 0 -20px;
+    }
+
+    .bg-circle1 {
+      width: 32%;
+      position: absolute;
+      right: 0;
+      top: 25px;
+      z-index: 0;
+
+      @include tab {
+        width: unset;
+        top: -25px;
+        height: 120px;
+      }
+      @include rwd(760) {
+        right: -300px;
+      }
+    }
+    .bg-circle2 {
+      width: 32%;
+      position: absolute;
+      bottom: 70px;
+      z-index: 0;
+
+      @include tab {
+        width: unset;
+        bottom: 150px;
+        left: -100px;
+      }
+      @include rwd(760) {
+        bottom: -60px;
+        left: -200px;
+      }
+      @include sm {
+        left: -300px;
+      }
+    }
+    .bg-blue {
+      position: absolute;
+      right: 0;
+      top: 300px;
+      width: calc(100% - 140px);
+      height: 517px;
+      border-radius: 10px 0px 0px 10px;
+      background: $blue;
+      z-index: 0;
+
+      @include xl {
+        height: 317px;
+        width: calc(100% - 100px);
+      }
+      @include m2 {
+        width: calc(100% - 20px);
+      }
+    }
+  }
+  &__wrapper {
+    padding: 0 220px;
+    display: flex;
+    z-index: 1;
+    position: relative;
+    flex-direction: column;
+
+    @include xl {
+      padding: 0 100px;
+    }
+
+    @include tab {
+      padding: 0 20px;
+      align-items: center;
+    }
+
+    .top {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+
+      @include tab {
+        display: grid;
+        grid-template-columns: repeat(2, 348px);
+        grid-auto-rows: 473px;
+        grid-gap: 25px 25px;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+      @include rwd(760) {
+        grid-template-columns: repeat(auto-fill, 348px);
+      }
+
+      div {
+        &:first-child {
+          margin-right: 25px;
+
+          @include xl {
+            margin-right: 15px;
+          }
+
+          @include tab {
+            margin-right: 25px;
+          }
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+
+      @include tab {
+        display: grid;
+        grid-template-columns: repeat(2, 348px);
+        grid-auto-rows: 473px;
+        grid-gap: 25px 25px;
+        align-items: end;
+      }
+      @include rwd(760) {
+        grid-template-columns: repeat(auto-fill, 348px);
+      }
+      @include sm {
+        grid-template-columns: repeat(auto-fill, 100%);
+      }
+
+      div {
+        &:not(:last-child) {
+          margin-right: 25px;
+
+          @include xl {
+            margin-right: 15px;
+          }
+
+          @include tab {
+            margin: 0;
+          }
+        }
+        &:last-child {
+          @include tab {
+            grid-column: 2 / 3;
+            @include rwd(760) {
+              grid-column: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__item {
+    width: 32.2%;
+    height: 532px;
+    padding: 50px 35px 80px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: $white;
+
+    @include xl {
+      padding: 45px 25px 45px 25px;
+      height: 473px;
+    }
+
+    @include tab {
+      width: 348px;
+    }
+
+    &:hover {
+      box-shadow: 0px 20px 60px rgba(50, 50, 101, 0.2);
+    }
+
+    img {
+      width: 247px;
+      height: 147px;
+      border-radius: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: $blue;
+      font-family: "DejaVu-LightCaps", sans-serif;
+
+      @include xl {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+      color: $black;
+    }
+
+    a {
+      font-size: 20px;
+      text-align: center;
+      color: $blue;
+      position: relative;
+
+      @include xl {
+        font-size: 18px;
+      }
+
+      &::before {
+        content: "";
+        width: 28px;
+        height: 3px;
+        background-color: #1c5392;
+        position: absolute;
+        top: 60%;
+        left: -40px;
+      }
+
+      &::after {
+        content: "";
+        width: 28px;
+        height: 3px;
+        background-color: #1c5392;
+        position: absolute;
+        top: 60%;
+        right: -40px;
+      }
+    }
+  }
+}

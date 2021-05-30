@@ -1,0 +1,137 @@
+.about-college {
+  padding: 125px 140px 45px 140px;
+  margin-left: 140px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+
+  @include xl {
+    padding: 105px 80px 45px 90px;
+    margin-left: 100px;
+  }
+
+  @include tab {
+    padding: 40px 20px 20px 20px;
+    margin-left: 20px;
+  }
+
+  @include m2 {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  img {
+    max-width: 536px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 125px;
+    left: 140px;
+    z-index: 2;
+
+    @include xl {
+      max-width: 440px;
+      top: 105px;
+      left: 90px;
+    }
+
+    @include lg {
+      max-width: 350px;
+    }
+
+    @include tab {
+      top: 40px;
+      left: 90px;
+      max-width: 263px;
+    }
+
+    @include m2 {
+      position: static;
+      width: 100%;
+      max-width: unset;
+    }
+  }
+
+  &__text {
+    width: 60%;
+    margin-left: 560px;
+
+    @include xl {
+      margin-left: 460px;
+    }
+
+    @include lg {
+      margin-left: 385px;
+    }
+
+    @include m2 {
+      width: 100%;
+      margin: 0;
+    }
+    h2 {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 40px;
+      text-align: left;
+      color: $black;
+      margin-bottom: 40px;
+
+      @include xl {
+        font-size: 30px;
+        margin-bottom: 25px;
+      }
+
+      @include lg {
+        font-size: 20px;
+      }
+
+      @include tab {
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      // max-height: 235px;
+      font-size: 20px;
+      line-height: 33px;
+      text-align: left;
+      color: $black;
+      margin-bottom: 10px;
+      overflow: hidden;
+
+      @include xl {
+        margin-bottom: 25px;
+        // max-height: 168px;
+        
+      }
+
+      @include lg {
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      @include tab {
+        // max-height: 95px;
+      }
+
+      @include m2 {
+        max-height: unset;
+      }
+    }
+
+    a {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 30px;
+      text-align: left;
+      color: $black;
+
+      @include xl {
+        font-size: 20px;
+      }
+
+      @include lg {
+        font-size: 16px;
+      }
+    }
+  }
+}

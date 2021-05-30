@@ -1,0 +1,107 @@
+.graduate {
+  margin-top: 70px;
+  &__years {
+    margin-bottom: 65px;
+
+    @include tab {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include m2 {
+      flex-wrap: wrap;
+    }
+    span {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 24px;
+      text-align: left;
+      color: #666;
+      margin-right: 60px;
+
+      @include tab {
+        margin: 0;
+      }
+      @include m2 {
+        margin-right: 105px;
+        margin-bottom: 20px;
+      }
+      @include sm {
+        margin-right: 40px;
+      }
+
+      &.active {
+        color: $blue;
+      }
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(348px, max-content));
+    gap: 20px;
+    justify-content: center;
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    &:hover {
+      .imgs {
+        .on-hover {
+          opacity: 1;
+          img {
+            width: 48px;
+          }
+        }
+      }
+      
+    }
+
+    .imgs {
+      position: relative;
+      width: 100%;
+      height: 236px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .on-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($blue, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+
+        img {
+          width: 1px;
+          height: auto;
+          transition: width 0.3s;
+        }
+      }
+    }
+  }
+
+  &__info {
+    h3 {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 18px;
+      text-align: left;
+      color: $dark;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 16px;
+      text-align: left;
+      color: $dark;
+    }
+  }
+}

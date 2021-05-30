@@ -1,0 +1,392 @@
+.photo-gallery {
+  padding: 120px 140px;
+  position: relative;
+  overflow: hidden;
+
+  @include xl {
+    padding: 65px 100px 90px 100px;
+  }
+  @include tab {
+    padding: 40px 20px 150px 20px;
+  }
+  &__name {
+    font-family: "MarkCAPS-bold", sans-serif;
+    font-size: 40px;
+    text-align: left;
+    color: $blue;
+    margin-bottom: 65px;
+
+    @include xl {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+  }
+  &__gallery {
+    width: 100%;
+    margin-bottom: 150px;
+    position: relative;
+
+    @include xl {
+      margin-bottom: 135px;
+    }
+    @include tab {
+      margin-bottom: 0;
+    }
+
+    &_all {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 0;
+
+      @include tab {
+        justify-content: center;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    padding: 45px 25px;
+    width: 100%;
+    height: 381px;
+    justify-content: space-between;
+    box-shadow: 0px 9px 35px rgba(50, 50, 101, 0.2);
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background: $white;
+
+    @include xl {
+      padding: 35px 25px;
+      margin-bottom: 20px;
+      height: 266px;
+    }
+    @include tab {
+      width: 530px;
+      height: 266px;
+    }
+    @include m2 {
+      max-width: 354px;
+        height: 215px;
+        padding: 22px 5px;
+    }
+
+    &_all {
+      width: 730px;
+
+      @include rwd(1780) {
+        width: 630px;
+      }
+      @include xl {
+        width: 530px;
+      }
+      @include rwd(1280) {
+        width: 400px;
+        height: 200px;
+        padding: 20px;
+      }
+      @include tab {
+        width: 530px;
+        height: 266px;
+        padding: 45px 25px;
+      }
+      @include sm {
+        max-width: 354px;
+        height: 215px;
+        padding: 22px 5px;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tab {
+      display: none;
+    }
+
+    span {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 30px;
+      color: $blue;
+      margin-right: 20px;
+    }
+  }
+
+  &__container {
+    width: 100%;
+
+    @include tab {
+      overflow: unset !important;
+    }
+  }
+
+  &__wrapper {
+    @include tab {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__slide {
+    padding: 25px;
+
+    @include xl {
+      padding: 20px;
+    }
+    @include tab {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      align-items: center;
+    }
+  }
+
+  &__prev {
+    left: -50px !important;
+    top: 48% !important;
+    width: 64px !important;
+    height: 64px !important;
+    background: #4279b8;
+    border-radius: 50%;
+    color: $white !important;
+
+    @include xl {
+      width: 40px !important;
+      height: 40px !important;
+      left: -30px !important;
+    }
+    @include tab {
+      display: none !important;
+    }
+
+    &::after {
+      font-size: 25px !important;
+
+      @include xl {
+        font-size: 20px !important;
+      }
+    }
+  }
+  &__next {
+    right: -50px !important;
+    top: 48% !important;
+    width: 64px !important;
+    height: 64px !important;
+    background: #4279b8;
+    border-radius: 50%;
+    color: $white !important;
+
+    @include xl {
+      width: 40px !important;
+      height: 40px !important;
+      right: -30px !important;
+    }
+    @include tab {
+      display: none !important;
+    }
+
+    &::after {
+      font-size: 25px !important;
+
+      @include xl {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+
+.gallery-item {
+  &__photo {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    gap: 3px;
+    height: 100%;
+    border-radius: 15px;
+    margin-right: 20px;
+
+    @include sm {
+      margin-right: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .item1 {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+    .item2 {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .item3 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .item4 {
+      grid-column: 3;
+      grid-row: 1 / 3;
+    }
+    .item5 {
+      grid-column: 1;
+      grid-row: 3;
+    }
+    .item6 {
+      grid-column: 2 / 4;
+      grid-row: 3;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    width: 45%;
+
+    @include rwd(1280) {
+      padding: 10px;
+    }
+    @include m2 {
+      padding: 0;
+    }
+
+    h3 {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 20px;
+      color: $blue;
+      text-align: center;
+
+      @include xl {
+        font-size: 14px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+      color: $dark;
+
+      @include xl {
+        font-size: 12px;
+        // max-height: 80px;
+        overflow: hidden;
+      }
+      @include tab {
+        overflow: unset;
+      }
+    }
+
+    a {
+      font-size: 18px;
+      text-align: center;
+      color: $blue;
+      position: relative;
+
+      @include xl {
+        font-size: 12px;
+      }
+
+      &::before {
+        content: "";
+        height: 2px;
+        background-color: $blue;
+        width: 30px;
+        position: absolute;
+        left: -40px;
+        top: 12px;
+
+        @include xl {
+          top: 8px;
+        }
+      }
+      &::after {
+        content: "";
+        height: 2px;
+        background-color: $blue;
+        width: 30px;
+        position: absolute;
+        right: -40px;
+        top: 12px;
+
+        @include xl {
+          top: 8px;
+        }
+      }
+    }
+  }
+}
+
+.circle1 {
+  width: 33%;
+  position: absolute;
+  top: 200px;
+  right: 0;
+
+  @include xl {
+    top: 100px;
+  }
+  @include m2 {
+    width: unset;
+    right: -350px;
+  }
+}
+.circle2 {
+  width: 33%;
+  position: absolute;
+  bottom: 300px;
+  left: 0;
+
+  @include xl {
+    bottom: 250px;
+  }
+  @include m2 {
+    width: unset;
+    left: -300px;
+    bottom: 70px;
+  }
+
+  &_all {
+    bottom: 120px;
+    @include sm {
+      bottom: 50px;
+    }
+  }
+}
+
+.all-name {
+  font-family: "MarkCAPS-bold";
+  font-size: 30px;
+  text-align: left;
+  color: $blue;
+  margin-bottom: 30px;
+
+  @include xl {
+    font-size: 20px;
+  }
+  @include sm {
+    font-size: 16px;
+  }
+
+  &_link {
+    display: block;
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 90px;
+
+    @include m2 {
+      margin: 25px 0 50px 0;
+    }
+  }
+}

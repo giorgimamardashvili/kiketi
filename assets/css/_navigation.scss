@@ -1,0 +1,130 @@
+.navigation {
+  width: 500px;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  right: -500px;
+  top: 0;
+  padding-top: 90px;
+  padding-right: 40px;
+  z-index: 50;
+  background-color: $blue;
+  overflow: scroll;
+
+  @include tab {
+    display: block;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+
+  &.active {
+    right: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding-left: 100px;
+    position: relative;
+
+    @include sm {
+      padding-left: 35px;
+    }
+
+    &.active {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 36px;
+        background: #fff;
+        top: 0;
+        left: 0;
+      }
+
+      .navigation__name {
+          span {
+            font-size: 30px;
+          }
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-size: 20px;
+      text-align: left;
+      color: $white;
+    }
+
+    .plus-minus {
+      width: 25px;
+      height: 25px;
+      background: transparent;
+      // border: 3px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      span {
+        width: 10px;
+        height: 2px;
+        background: $white;
+        opacity: 0.6;
+        transition: opacity 0.5s;
+
+        &:last-child {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(90deg);
+
+          &.hide {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+
+    a {
+      font-size: 16px;
+      text-align: left;
+      color: $white;
+      line-height: 40px;
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__socials {
+    padding-left: 100px;
+
+    a {
+      margin-right: 30px;
+    }
+  }
+}

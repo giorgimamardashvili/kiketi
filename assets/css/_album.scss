@@ -1,0 +1,47 @@
+.album {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(348px, max-content));
+  gap: 20px;
+  justify-content: center;
+  grid-row: minmax(min-content, 236px);
+
+  &_video {
+    margin-top: 50px;
+  }
+
+  &__item {
+    position: relative;
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      .on-hover {
+        opacity: 1;
+        img {
+          width: 48px;
+        }
+      }
+    }
+    .on-hover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(28, 83, 146, 0.3);
+      display: flex;
+      align-items: center;
+
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+
+      img {
+        width: 1px;
+        height: auto;
+        transition: width 0.3s;
+      }
+    }
+  }
+}

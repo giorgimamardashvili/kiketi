@@ -1,0 +1,159 @@
+.main-slider {
+  height: calc(100vh - 110px);
+  width: calc(100% - 140px);
+  background-color: $blue;
+  border-radius: 0px 0px 10px 0px;
+  position: relative;
+
+  @include xl {
+    height: calc(100vh - 83px);
+    width: calc(100% - 100px);
+  }
+
+  @include tab {
+    height: unset;
+    padding-bottom: 10px;
+  }
+
+  @include m2 {
+    padding-bottom: 80px;
+    width: calc(100% - 65px);
+  }
+  &__container {
+    height: 97%;
+    left: 140px;
+    border-radius: 10px 0px 0px 10px;
+
+    @include xl {
+      left: 100px;
+    }
+
+    @include tab {
+      left: 20px;
+      width: calc(100vw - 20px);
+      height: calc(100% - 20px);
+    }
+  }
+  &__wrapper {
+  }
+  &__slide {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    div {
+      position: absolute;
+      left: 0;
+      bottom: 100px;
+      width: 536px;
+      height: auto;
+      border-radius: 0px 10px 10px 0px;
+      background: transparent;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(30px);
+      --webkit-backdrop-filter: blur(30px);
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 30px 70px;
+
+      font-family: "MarkCAPS-bold", sans-serif;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 61px;
+      text-align: left;
+      color: #fff;
+
+      @include tab {
+        width: 356px;
+        height: 163px;
+        padding: 55px 20px;
+        font-size: 20px;
+        line-height: 30px;
+        bottom: 5%;
+      }
+
+      @include m2 {
+        width: 90%;
+        height: fit-content;
+        padding: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    right: 0px;
+    bottom: 100px;
+    display: flex;
+
+    // @include xl {
+    //   bottom: 80px;
+    //   right: 125px;
+    // }
+
+    @include tab {
+      bottom: 60px;
+      right: -60px;
+    }
+
+    @include m2 {
+      bottom: 20px;
+      right: 30%;
+    }
+
+    // &_out {
+    //   display: none;
+
+    //   @include m2 {
+    //     display: flex;
+    //   }
+    // }
+
+    div {
+      position: initial !important;
+      width: 64px;
+      height: 64px;
+      background: transparent;
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+
+      @include lg {
+        width: 40px;
+        height: 40px;
+      }
+
+      &:first-child {
+        margin-right: 30px;
+      }
+
+      &::after {
+        font-size: 25px;
+        color: $white;
+      }
+    }
+  }
+
+  &__socials {
+    position: absolute;
+    left: 55px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+
+    @include xl {
+      left: 30px;
+    }
+
+    @include tab {
+      display: none;
+    }
+
+    a {
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

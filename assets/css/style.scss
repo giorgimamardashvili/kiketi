@@ -1,0 +1,47 @@
+@import "fonts";
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  border: 0;
+  resize: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Mark-bold", sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh
+}
+
+@import "header";
+@import "main-slider";
+@import "about-college";
+@import "news";
+@import "college-options";
+@import "about";
+@import "graduate";
+@import "director";
+@import "programs";
+@import "services";
+@import "photo-gallery";
+@import "video-gallery";
+@import "album";
+@import "article-page";
+@import "news-page";
+@import "questions";
+@import "contact";
+@import "navigation";
+@import "footer";
